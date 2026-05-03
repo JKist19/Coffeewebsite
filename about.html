@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Us | Ross Bakery</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f8f4f0;
+            color: #333;
+        }
+
+        /* HEADER */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #8b4513;
+            color: #faf0e6;
+            text-align: center;
+            padding: 25px 0;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        header.shrink {
+            padding: 10px 0;
+        }
+
+        header h1 {
+            margin-bottom: 10px;
+            font-size: 2.5em;
+            transition: font-size 0.3s ease;
+        }
+
+        header.shrink h1 {
+            font-size: 1.6em;
+        }
+
+        /* NAV */
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #faf0e6;
+            font-weight: bold;
+            padding: 6px 12px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #fff;
+            color: #8b4513;
+        }
+
+        /* MAIN CONTENT */
+        main {
+            max-width: 900px;
+            margin: 160px auto 40px; /* space for fixed header */
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        section {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-left: 6px solid #8b4513;
+        }
+
+        section h2 {
+            margin-bottom: 15px;
+            color: #8b4513;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #8b4513;
+            color: #faf0e6;
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+<header id="header">
+    <h1>About Ross Bakery</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section>
+        <h2>Our History</h2>
+        <p>
+            Founded in the heart of Ross, Ohio, Ross Bakery began as a small, family-owned shop
+            with a simple goal: to bring fresh, homemade baked goods to our community each day.
+            What started as a neighborhood bakery quickly became a local favorite, known for the
+            comforting aroma of bread in the morning and the friendly faces behind the counter.
+            Over the years, we have continued to grow while staying true to our roots—serving
+            generations of families with recipes passed down and perfected with care.
+        </p>
+    </section>
+
+    <section>
+        <h2>Our Mission</h2>
+        <p>
+            At Ross Bakery, our mission is to provide high-quality baked goods made from fresh,
+            carefully selected ingredients. We are committed to creating a warm and welcoming
+            environment where every customer feels like part of our family. From handcrafted
+            breads and pastries to custom cakes for special occasions, we take pride in delivering
+            products that not only taste exceptional but also bring people together.
+        </p>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2026 Ross Bakery</p>
+</footer>
+
+<script>
+    const header = document.getElementById("header");
+
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+            header.classList.add("shrink");
+        } else {
+            header.classList.remove("shrink");
+        }
+    });
+</script>
+
+</body>
+</html>
