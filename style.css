@@ -1,0 +1,161 @@
+/* HEADER */
+.site-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #8b4513;
+    color: #faf0e6;
+    text-align: center;
+    padding: 20px 0;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* SHRINK EFFECT */
+.site-header.shrink {
+    padding: 10px 0;
+}
+
+.site-header h1 {
+    font-size: 2.5em;
+    transition: font-size 0.3s ease;
+}
+
+.site-header.shrink h1 {
+    font-size: 1.6em;
+}
+
+/* NAV */
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 10px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #faf0e6;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #fff;
+    color: #8b4513;
+}
+
+/* HERO SPACING FIX */
+.hero {
+    margin-top: 140px;
+    height: 60vh;
+    background: url("images/OIP.jpg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #8b4513;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+/* CARDS */
+.card-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* IMAGE SECTION */
+.image-section {
+    display: flex;
+    gap: 20px;
+    padding: 40px;
+    align-items: center;
+}
+
+.image-section img {
+    width: 50%;
+    border-radius: 10px;
+}
+
+/* INFO SECTION */
+.info-section {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px;
+}
+
+.info-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+}
+
+/* MOBILE MENU */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: #faf0e6;
+    cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+        margin: 10px auto;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        display: none;
+        background-color: #8b4513;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .image-section {
+        flex-direction: column;
+    }
+
+    .image-section img {
+        width: 100%;
+    }
+
+    .info-section {
+        flex-direction: column;
+        align-items: center;
+    }
+}
